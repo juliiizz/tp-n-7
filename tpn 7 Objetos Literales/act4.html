@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act4 tpn7</title>
+</head>
+<!-- Crear un objeto literal que represente a un empleado. Definición de objeto:
+* nombre: El nombre del empleado.             * edad: La edad del empleado.
+* puesto: El puesto de trabajo del empleado.  * salario: El salario mensual del empleado.
+
+Métodos del objeto:
+* Añade un método llamado mostrarInfo que imprima en la consola la información completa del empleado.
+* Añade un método llamado aumentarSalario que reciba un porcentaje como parámetro y aumente el salario del empleado en ese 
+procentaje. Luego, muestre un mensaje indicando el nuevo salario.-->
+
+<body>
+    <script>
+
+        const empleado = {
+            nombre: "Benicio",
+            edad: 28,
+            puestoTrabajo: "Contador",
+            salarioMensual: 1000000,
+
+            mostrarInfo: function () {
+                console.log(`Nombre: ${this.nombre}, Edad: ${this.edad}, Puesto: ${this.puestoTrabajo}, 
+                Salario: ${this.salarioMensual}`);
+            },
+
+            aumentarSalario: function (porcentaje) {
+                this.salarioMensual += this.salarioMensual * (porcentaje / 100);
+                console.log(`Nuevo salario luego del aumento: ${this.salarioMensual}`);
+            }
+        };
+
+        empleado.mostrarInfo(); 
+        empleado.aumentarSalario(20); 
+
+    </script>
+
+</body>
+
+</html>

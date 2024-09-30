@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act3 tpn7</title>
+</head>
+<!-- Crear un objeto que represente un libro, incluyendo propiedades y métodos. El objeto debe tener las siguientes propiedades:
+Definición del objeto:
+* titulo: El título del libro.                        * autor: El nombre del autor del libro.
+* añoPublicacion: El año en que se publicó el libro.  * genero: El género literario del libro.
+* disponible: Indica si el libro está disponible para préstamo.
+
+Métodos del objeto:
+* Añade un método llamado mostrarInfo, que imprima en la consola la información completa del libro.
+* Añade un método llamado prestar que cambie el estado de la propiedad disponible a false y muestre un mensaje indicando que 
+el libro ha sido prestado.
+* Añade un método llamado devolver que cambie el estado de la propiedad disponible a true y muestre un mensaje indicando que el
+libro ha sido devuelto --> 
+<body>
+    <script>
+        const libro = {
+            titulo: "El Principito",
+            autor: "Antoine de Saint-Exupéry",
+            añoPublicacion: 1943,
+            genero: "Novela, Literatura Infantil",
+            disponible: true,
+
+            mostrarInfo: function () {
+                console.log(`Título: ${this.titulo}`);
+                console.log(`Autor: ${this.autor}`);
+                console.log(`Año de Publicación: ${this.añoPublicacion}`);
+                console.log(`Género: ${this.genero}`);
+                console.log(`Disponible: ${this.disponible ? 'Sí' : 'No'}`);
+            },
+
+            prestar: function () {
+                if (this.disponible) {
+                    this.disponible = false;
+                    console.log(`El libro "${this.titulo}" ha sido prestado.`);
+                } else {
+                    console.log(`El libro "${this.titulo}" no está disponible para préstamo.`);
+                }
+            },
+
+            devolver: function () {
+                if (this.disponible) {
+                    this.disponible = true;
+                    console.log(`El libro "${this.titulo}" ha sido devuelto.`);
+                } else {
+                    console.log(`El libro "${this.titulo}" ya estaba disponible.`);
+                }
+            }
+        };
+
+        libro.mostrarInfo(); 
+        libro.prestar(); 
+        libro.devolver();
+
+    </script>
+
+</body>
+
+</html>

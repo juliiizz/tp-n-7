@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act2 tpn7</title>
+</head>
+<!-- Crear un objeto que represente un coche con propiedades como marca, modelo y año.
+Asignar un método que imprima la información del coche y otro método que actualice
+las propiedades del objeto -->
+
+<body>
+    <script>
+        const coche = {
+            marca: "Peugeot",
+            modelo: 208,
+            año: 2019,
+
+            infoCoche: function () {
+                console.log(`Marca: ${this.marca}`);
+                console.log(`Modelo: ${this.modelo}`);
+                console.log(`Año: ${this.año}`);
+            },
+
+            infoAct: function (nuevaMarca, nuevoModelo, nuevoAño) {
+                this.marca = nuevaMarca;
+                this.modelo = nuevoModelo;
+                this.año = nuevoAño;
+            }
+        };
+
+        coche.infoCoche();
+        coche.infoAct("Toyota", "Corolla", 2022);
+        coche.infoCoche();
+
+
+
+    </script>
+</body>
+
+</html>
